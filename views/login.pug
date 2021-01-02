@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        title login
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="../style.css")
+        link(rel="shortcut icon" href="#")
+    body
+        form.login(method="POST" action="/login")
+            each msg in error
+                p.error=msg
+            each msg in success
+                p.success=msg
+            label(for="username") username
+            input(type="text" name="username" id="name" autocomplete="off")
+            label(for="password") password
+            input(type="password" name="password" id="password" autocomplete="off")
+            input(type="submit" value="Submit")
+        

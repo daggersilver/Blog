@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title New Post
+        link(rel="stylesheet", href="../style.css", type="text/css")
+        script(src=`https://cdn.tiny.cloud/1/${process.env.TEXT_API}/tinymce/5/tinymce.min.js` referrerpolicy="origin")
+        script tinymce.init({selector: '#content'});
+    body.createblog
+        h1 Edit Blog
+        each err in error
+                p.error=err
+        form(action=`/${id}/edit` method="POST") 
+            label(for="title") Title
+            input(type="text" id="title" name="title" autocomplete="off" placeholder="Title goes here" value=title)
+            label(for="content") Content
+            textarea(name="content", cols="30", rows="10" id="content" ) #{content}
+            div
+                label(for="publish") Publish Blog?
+                input(type="checkbox" id="publish" name="publish" value="yes" checked)
+            input(type="submit" id="submit" value="Submit" )
+
+

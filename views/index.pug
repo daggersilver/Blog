@@ -1,0 +1,45 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title HomePage
+        link(rel="stylesheet", href="/style.css", type="text/css")
+    body
+        nav
+            a(href="/new-post") Create new post
+            if user
+                a(href="/logout") Logout
+        each msg in success
+            p.success=msg
+        each msg in error
+            p.error=msg
+        each blog in blogs 
+            div.myblogs
+                if blog.publish
+                    p.pub.green-back Published
+                    div.edit 
+                        a(href=`/${blog._id}/status`) UnPublish
+                        a(href=`/${blog._id}/edit`) Edit
+                        a(href=`/${blog._id}/delete`) Delete
+                else 
+                    p.pub.red-back Not Published
+                    div.edit 
+                        a(href=`/${blog._id}/status`) Publish
+                        a(href=`/${blog._id}/edit`) Edit
+                        a(href=`/${blog._id}/delete` ) Delete
+                p.title=blog.title
+                div.content !{blog.content}
+                p.date=blog.date
+                div.comments.readcomments
+                    h3 Read Comments
+                    if blog.comments.length==0
+                        h2 Empty Here
+                    each com in blog.comments
+                        div.com
+                            p=com.username
+                            p=com.comment
+                            
+
+        a(href="/publish-all" class="allpub") All
+    script(src="/script.js")
