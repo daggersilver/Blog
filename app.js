@@ -39,7 +39,7 @@ app.use(session({
 
 //cors
 app.use(cors({
-    origin: 'https://daggersilver.github.io/Blog/'
+    origin: 'https://daggersilver.github.io/'
 }));
 
 //connect flash middleware
