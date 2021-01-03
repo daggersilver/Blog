@@ -38,7 +38,9 @@ app.use(session({
 }))
 
 //cors
-app.use(cors());
+app.use(cors({
+    origin: 'https://daggersilver.github.io/Blog/'
+}));
 
 //connect flash middleware
 app.use(cookieParser('keyboard cat'));
