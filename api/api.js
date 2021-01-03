@@ -31,7 +31,7 @@ router.post("/:id/:sent_api", (req,res)=>{
         }
     }, (err, data)=>{
         if(err) throw err;
-        res.redirect("/")
+        res.send("successfull")
         return;
     })
 })
