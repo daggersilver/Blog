@@ -7,6 +7,7 @@ const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const path = require("path");
 const app = express();
 const port = process.env.PORT || 3000;
@@ -35,6 +36,9 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }))
+
+//cors
+app.use(cors());
 
 //connect flash middleware
 app.use(cookieParser('keyboard cat'));
