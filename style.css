@@ -1,0 +1,107 @@
+html *{
+    margin: 0;
+    font-family:  sans-serif;
+}
+body{
+    height: 100%;
+    background: url("/images/background.jpg") center repeat;
+    background-size: contain;
+}
+nav{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+nav h1{
+    margin-left: 5%;
+}
+
+.blog-card{
+    margin: 100px auto;
+    max-width: 700px;
+    box-sizing: border-box;
+    padding: 5%;
+    background-color: blanchedalmond;
+}
+.blogh1{
+    font-size: 23px;
+    color: rgb(53, 51, 51);
+    width: fit-content;
+    padding-bottom: 13px;
+    border-bottom: 2px solid gray;
+    margin-bottom: 10px;
+}
+.blogdate{
+    margin-top: 20px;
+    color: rgb(54, 53, 53);
+    padding-top: 10px;
+    border-top: 1px solid gray;
+}
+.readcoms{
+    margin: 40px 0 20px 0;
+    width: fit-content;
+    text-decoration: underline;
+    font-size: 20px;
+    cursor: pointer;
+}
+.eachcom{
+    box-sizing: border-box;
+    padding: 15px 20px;
+}
+.eachcom:nth-child(even){
+    background-color: rgb(199, 196, 196);
+}
+.eachcom:nth-child(odd){
+    background-color: gainsboro;
+}
+.eachcom p:first-child{
+    color: rgb(20, 20, 19);
+    font-weight: bold;
+    font-size: 16px;
+}
+.eachcom p:last-child{
+    color: rgb(66, 66, 65);
+    font-size: 14px;
+    margin-top: 5px;
+    padding-left: 20px;
+}
+.commentform{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+.commentform h4{
+    width: fit-content;
+    color: gray;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid gray;
+}
+input[type="text"], textarea{
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+textarea{
+    height: 70px;
+}
+input[type="submit"]{
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+    color: gray;
+    cursor: pointer;
+}
+label{
+    color: rgb(44, 43, 43);
+    font-weight: lighter;
+}
+.commentcontainer{
+    display: none;
+}
