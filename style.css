@@ -4,7 +4,7 @@ html *{
 }
 body{
     height: 100%;
-    background: url("Blog/images/background.jpg") center repeat;
+    background: url("./images/background.jpg") center repeat;
     background-size: contain;
 }
 nav{
