@@ -1,5 +1,9 @@
 var content = document.getElementById("content");
 
+var loadingDiv = document.createElement("div");
+loadingDiv.setAttribute("class", "loading");
+content.appendChild(loadingDiv);
+
 
 fetchdata()
 
@@ -7,6 +11,8 @@ fetchdata()
 async function fetchdata(){
     var rawdata = await fetch("https://myblogs101.herokuapp.com/api/18fmqyojui7cp5up7vzrjrccnzdm63io0qhkllqzltq0kp1a", {mode: "cors"});
     var data = await rawdata.json();
+
+    content.removeChild(loadingDiv);
 
     for(var i=0; i<data.articles.length; i++){
         render(data.articles[i]);
