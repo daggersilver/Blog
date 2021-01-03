@@ -5,7 +5,7 @@ fetchdata()
 
 
 async function fetchdata(){
-    var rawdata = await fetch(`https://myblogs101.herokuapp.com/api/${process.env.API_KEY}`, {mode: "cors"});
+    var rawdata = await fetch("https://myblogs101.herokuapp.com/api/18fmqyojui7cp5up7vzrjrccnzdm63io0qhkllqzltq0kp1a", {mode: "cors"});
     var data = await rawdata.json();
     console.log(data.articles)
 
@@ -59,7 +59,7 @@ function render(data){
                              <input type="submit" value="Submit">`;
     commentform.setAttribute("class", "commentform");
     commentform.setAttribute("method", "POST");
-    commentform.setAttribute("action", `https://myblogs101.herokuapp.com/api/${data._id}/${process.env.API_KEY}`)
+    commentform.setAttribute("action", `https://myblogs101.herokuapp.com/api/${data._id}/18fmqyojui7cp5up7vzrjrccnzdm63io0qhkllqzltq0kp1a`)
     commentcontainer.appendChild(commentform);
 
     card.appendChild(commentcontainer);
