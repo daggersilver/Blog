@@ -82,8 +82,14 @@ app.get("/", checkauth, (req, res)=>{
 //set routes
 const routes = require("./router/routes");
 const api = require("./api/api");
+const { read } = require("fs");
 app.use("/", routes);
 app.use("/api", api);
+
+//error route
+app.get("*", (req, res)=>{
+    res.status(404).render("404");
+})
 
 app.listen(port);
 

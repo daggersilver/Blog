@@ -201,3 +201,27 @@ input[type="submit"]:hover{
     height: auto;
     overflow: visible;
 }
+.errorpage{
+    background-color: red;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.errorpage *{
+    margin-top: 30px;
+    text-align: center;
+}
+.errorpage a{
+    color: white;
+}
+.errorpage h1{ 
+    font-size: 80px;
+}
+.errorpage h2{
+    font-size: 50px;
+}
+.errorpage p{
+    font-size: 30px;
+}
